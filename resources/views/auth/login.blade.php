@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Iniciar sesión')
+
 @section('content')
     <div class="auth-page">
         <div class="w-100 auth-card">

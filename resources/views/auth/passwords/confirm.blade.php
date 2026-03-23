@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Confirmar contraseña')
+
 @section('content')
     <div class="auth-page">
         <div class="w-100 auth-card">

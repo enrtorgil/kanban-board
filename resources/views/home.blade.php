@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Inicio')
+
 @section('content')
     <div class="mb-4">
         <h1 class="page-title">Bienvenido, {{ auth()->user()->name }}</h1>
