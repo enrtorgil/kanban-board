@@ -6,7 +6,8 @@
     <div class="mb-4">
         <h1 class="page-title">Bienvenido, {{ auth()->user()->name }}</h1>
         <p class="page-subtitle">
-            Esta será la base de tu aplicación Kanban. Desde aquí montaremos proyectos, columnas y tareas.
+            Visualiza, organiza y controla el progreso de tus proyectos.
+            Gestiona tus tareas con un flujo Kanban flexible y configurable.
         </p>
     </div>
 
@@ -50,9 +51,7 @@
                     </div>
                 </div>
 
-                <hr class="my-4">
-
-                <h3 class="h5 mb-3">Próximos pasos</h3>
+                <h3 class="h5 mb-3 my-5">Próximos pasos</h3>
 
                 <div class="d-flex flex-column gap-3">
                     <div class="border rounded-4 p-3">

@@ -1,6 +1,4 @@
-# Plataforma de gestión de proyectos · KanbanBoard
-
-![Kanban Preview](public/img/readme/kanban-board-banner-darkTheme.jpg)
+![Kanban Preview](public/img/readme/kanban-board-banner-lightTheme.jpg)
 
 Aplicación de gestión de proyectos tipo Kanban desarrollada en Laravel, orientada a organizar tareas de forma visual, flexible y escalable.
 
