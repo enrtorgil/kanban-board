@@ -1,4 +1,4 @@
-![Kanban Preview](public/img/readme/kanbanboard-light.png)
+![Kanban Preview](public/img/readme/kanban-board-light-theme.png)
 
 Aplicación de gestión de proyectos tipo Kanban desarrollada en Laravel, orientada a organizar tareas de forma visual, flexible y escalable.
 
