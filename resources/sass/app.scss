@@ -1,0 +1,387 @@
+@import url('https://fonts.bunny.net/css?family=Nunito:400,600,700');
+
+// Bootstrap variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// =========================================================
+// THEME TOKENS
+// =========================================================
+:root {
+    --app-bg: #f5f7fb;
+    --app-bg-soft: #eef2ff;
+    --app-surface: #ffffff;
+    --app-surface-2: #f8fafc;
+    --app-navbar: #ffffff;
+    --app-border: #e9edf5;
+
+    --app-text: #111827;
+    --app-text-soft: #6b7280;
+    --app-text-muted: #94a3b8;
+
+    --app-primary: #4f46e5;
+    --app-primary-hover: #4338ca;
+    --app-primary-soft: #eef2ff;
+
+    --app-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme='dark'] {
+    --app-bg: #08152f;
+    --app-bg-soft: #0d1b39;
+    --app-surface: #0b1730;
+    --app-surface-2: #10203f;
+    --app-navbar: #08152f;
+    --app-border: #1a2d52;
+
+    --app-text: #f9fafb;
+    --app-text-soft: #cbd5e1;
+    --app-text-muted: #94a3b8;
+
+    --app-primary: #7367f0;
+    --app-primary-hover: #8b80f7;
+    --app-primary-soft: rgba(115, 103, 240, 0.14);
+
+    --app-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+// =========================================================
+// GLOBAL
+// =========================================================
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background: var(--app-bg);
+    color: var(--app-text);
+    transition: background-color .2s ease, color .2s ease;
+}
+
+a {
+    color: var(--app-primary);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--app-primary-hover);
+    }
+}
+
+// =========================================================
+// LAYOUT
+// =========================================================
+.app-shell {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.app-card {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: 16px;
+    box-shadow: var(--app-shadow);
+    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.page-title {
+    margin-bottom: .25rem;
+    color: var(--app-text);
+    font-weight: 700;
+}
+
+.page-subtitle {
+    margin-bottom: 0;
+    color: var(--app-text-soft);
+}
+
+// =========================================================
+// NAVBAR
+// =========================================================
+.app-navbar {
+    background: var(--app-navbar);
+    border-bottom: 1px solid var(--app-border);
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.app-navbar-inner {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.app-brand {
+    color: var(--app-text) !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+
+    span {
+        color: var(--app-primary);
+    }
+}
+
+.app-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+}
+
+.app-nav-link {
+    color: var(--app-text-soft);
+    font-weight: 500;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        color: var(--app-primary);
+    }
+}
+
+.app-nav-btn {
+    white-space: nowrap;
+}
+
+.app-user-trigger {
+    text-decoration: none;
+}
+
+// =========================================================
+// USER / DROPDOWN
+// =========================================================
+.user-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem .75rem;
+    border: 1px solid var(--app-border);
+    border-radius: 999px;
+    background: var(--app-surface-2);
+    color: var(--app-text);
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.user-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--app-primary);
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 700;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.dropdown-menu {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-item {
+    color: var(--app-text-soft);
+
+    &:hover,
+    &:focus {
+        background: var(--app-primary-soft);
+        color: var(--app-primary);
+    }
+}
+
+// =========================================================
+// AUTH
+// =========================================================
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 180px);
+}
+
+.auth-card {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.auth-card--wide {
+    max-width: 680px;
+}
+
+.auth-title {
+    margin-bottom: .5rem;
+    color: var(--app-text);
+    font-weight: 700;
+}
+
+.auth-subtitle {
+    margin-bottom: 0;
+    color: var(--app-text-soft);
+}
+
+// =========================================================
+// BOOTSTRAP OVERRIDES
+// =========================================================
+.text-muted {
+    color: var(--app-text-soft) !important;
+}
+
+.border {
+    border-color: var(--app-border) !important;
+}
+
+.bg-light {
+    background-color: var(--app-surface-2) !important;
+    color: var(--app-text);
+}
+
+.card {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+    color: var(--app-text);
+}
+
+.card-header {
+    background: transparent;
+    border-bottom-color: var(--app-border);
+    color: var(--app-text);
+}
+
+.form-control,
+.form-select {
+    background: var(--app-surface);
+    border-color: var(--app-border);
+    color: var(--app-text);
+
+    &:focus {
+        background: var(--app-surface);
+        border-color: var(--app-primary);
+        color: var(--app-text);
+        box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.12);
+    }
+}
+
+.form-check-input {
+    border-color: var(--app-border);
+
+    &:checked {
+        background-color: var(--app-primary);
+        border-color: var(--app-primary);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.12);
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: var(--app-text);
+    -webkit-box-shadow: 0 0 0 1000px var(--app-surface) inset;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+// =========================================================
+// BUTTONS
+// =========================================================
+.btn-primary {
+    background-color: var(--app-primary);
+    border-color: var(--app-primary);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--app-primary-hover) !important;
+        border-color: var(--app-primary-hover) !important;
+    }
+}
+
+.btn-outline-primary {
+    border-color: var(--app-primary);
+    color: var(--app-primary);
+
+    &:hover,
+    &:focus {
+        background-color: var(--app-primary);
+        border-color: var(--app-primary);
+        color: #fff;
+    }
+}
+
+.btn-link {
+    color: var(--app-primary);
+
+    &:hover {
+        color: var(--app-primary-hover);
+    }
+}
+
+// =========================================================
+// THEME TOGGLE
+// =========================================================
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--app-border);
+    border-radius: 999px;
+    background: var(--app-surface);
+    color: var(--app-text);
+    cursor: pointer;
+    transition: all .2s ease;
+    flex: 0 0 42px;
+
+    &:hover {
+        border-color: var(--app-primary);
+        background: var(--app-primary-soft);
+        color: var(--app-primary);
+    }
+}
+
+#theme-icon {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+// =========================================================
+// MOBILE
+// =========================================================
+@media (max-width: 575.98px) {
+    .app-navbar-inner {
+        gap: .75rem;
+    }
+
+    .app-navbar-right {
+        gap: .75rem;
+    }
+
+    .app-nav-link {
+        font-size: .95rem;
+    }
+
+    .app-nav-btn {
+        padding-inline: .85rem;
+    }
+}
