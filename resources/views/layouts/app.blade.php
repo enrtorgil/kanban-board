@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>@yield('title', env('app.name', 'Kanban Board'))</title>
 
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -20,6 +20,7 @@
         })();
     </script>
 
+    <!-- Incluye los archivos CSS y JS compilados por Vite (npm run dev o npm run build para cargar los archivos) -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     @stack('styles')
