@@ -4,17 +4,20 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\PermissionRegistrar;
 
 class RolesSeeder extends Seeder
 {
     public function run(): void
     {
+        app()[PermissionRegistrar::class]->forgetCachedPermissions(); // Clear cached permissions
+
         $superAdmin = Role::firstOrCreate([
             'name'       => 'superadmin',
             'guard_name' => 'web',
         ]);
 
-        $userRole = Role::firstOrCreate([
+        Role::firstOrCreate([
             'name'       => 'user',
             'guard_name' => 'web',
         ]);
@@ -22,8 +25,9 @@ class RolesSeeder extends Seeder
         $user = User::firstOrCreate(
             ['email' => 'superadmin@kanban.test'],
             [
-                'name'     => 'superadmin',
-                'password' => bcrypt('superadmin'),
+                'name'      => 'superadmin',
+                'password'  => 'superadmin',
+                'is_active' => true,
             ]
         );
 
