@@ -26,7 +26,6 @@ los estados (columnas) son completamente configurables, permitiendo adaptar el f
   - [Adjuntos](#adjuntos)
   - [Actividad](#actividad)
 - [Notificaciones](#notificaciones)
-- [Arquitectura técnica](#arquitectura-técnica)
 
 ---
 
@@ -165,9 +164,10 @@ Notificaciones integradas en la interfaz:
 
 ---
 
-## Arquitectura técnica
-
-- Laravel 12  
-- Blade + JavaScript  
-- MySQL  
-- Spatie Media Library  
+<div align="center">
+  
+  **Built with ❤️ using Laravel, Blade & a dynamic JavaScript-driven UI**
+  
+  ⭐ If you find this project useful, consider starring the repository
+  
+</div>
