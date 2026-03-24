@@ -8,6 +8,9 @@
 
     <title>@yield('title', env('app.name', 'Kanban Board'))</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('img/icons/favicon-kanbanBoard.png') }}">
+
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito:400,600,700" rel="stylesheet">
 
